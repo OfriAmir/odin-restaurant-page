@@ -20,7 +20,6 @@ export default function menuTabHtmlSetUp() {
 
     for (const ref in refs){
         if (ref === "contentDiv") continue
-        console.log(refs[ref])
         if (!(ref.includes("subSec") && ref.includes("Div"))){
             refs.contentDiv.appendChild(refs[ref])
         } else {
@@ -28,10 +27,8 @@ export default function menuTabHtmlSetUp() {
             for (const subRef in refs[ref]){
                 if (!subRef.includes("children")){
                     currentParent = refs[ref][subRef];
-                    console.log({ref,subRef})
                     refs.contentDiv.appendChild(currentParent);
                 } else {
-                    console.log({currentParent})
                     currentParent.appendChild(refs[ref][subRef]);
                 }
             }
@@ -59,14 +56,5 @@ export default function menuTabHtmlSetUp() {
     refs.subSec3Div1.parent1children2.append("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque officiis perspiciatis voluptatum vel ducimus quasi labore, enim sequi! Cupiditate similique aut libero corporis deserunt deleniti hic esse ullam modi nostrum.");
     refs.subSec3Div2.parent1children1.append("Memela");
     refs.subSec3Div2.parent1children2.append("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque officiis perspiciatis voluptatum vel ducimus quasi labore, enim sequi! Cupiditate similique aut libero corporis deserunt deleniti hic esse ullam modi nostrum.");
-
-
-    // subSec1Div2: createSubSecDivsBoilerplateObj(),
-    // subHeading2: document.createElement("h2"),
-    // subSec2Div1: createSubSecDivsBoilerplateObj(),
-    // subSec2Div2: createSubSecDivsBoilerplateObj(),
-    // subHeading3: document.createElement("h2"),
-    // subSec3Div1: createSubSecDivsBoilerplateObj(),
-    // subSec3Div2: createSubSecDivsBoilerplateObj(),
-
+    return "menu"
 }

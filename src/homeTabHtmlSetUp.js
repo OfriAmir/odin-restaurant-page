@@ -1,7 +1,7 @@
 import odinImage from "./odin-lined.png"
 export default function homeTabHtmlSetUp() {
     const refs = {
-        navBtns: Array.from(document.querySelectorAll("header nav button")),
+        // navBtns: Array.from(document.querySelectorAll("header nav button")),
         contentDiv: document.querySelector("div#content"),
         heading: document.createElement("h1"),
         heading2: document.createElement("h2"),
@@ -18,8 +18,8 @@ export default function homeTabHtmlSetUp() {
     refs.contentDiv.appendChild(refs.desc);
     refs.contentDiv.appendChild(refs.img);
     
-    const navBtnsTxt = ["Home", "Menu", "About"]
-    refs.navBtns.forEach((node ,index) => node.append(navBtnsTxt[index]));
+    // const navBtnsTxt = ["Home", "Menu", "About"]
+    // refs.navBtns.forEach((node ,index) => node.append(navBtnsTxt[index]));
     refs.heading.append("My Restaurant");
     refs.heading2Quote.append("The best restaurant in the world!");
     refs.heading2Link.append("Some critic");
@@ -29,4 +29,5 @@ export default function homeTabHtmlSetUp() {
     refs.desc.append("This is the my restaurant. It's real.");
     refs.desc.classList += "desc"
     refs.img.src = odinImage;
+    return "home" //to indicate that the was loaded and assign it to a variable in index.js later.
 }
