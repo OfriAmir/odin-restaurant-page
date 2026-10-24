@@ -1,5 +1,5 @@
 import odinImage from "./odin-lined.png"
-export default function homepageHtmlSetUp() {
+export default function homeTabHtmlSetUp() {
     const refs = {
         navBtns: Array.from(document.querySelectorAll("header nav button")),
         contentDiv: document.querySelector("div#content"),
@@ -27,5 +27,6 @@ export default function homepageHtmlSetUp() {
     const heading2Txt = document.createTextNode(" - ");
     refs.heading2.insertBefore(heading2Txt, refs.heading2Quote.nextSibling);
     refs.desc.append("This is the my restaurant. It's real.");
+    refs.desc.classList += "desc"
     refs.img.src = odinImage;
 }
