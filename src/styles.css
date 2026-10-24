@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #AAA;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #ffa500;
+}
+
+header nav{
+    display: flex;
+}
+
+header nav button{
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    outline: 0;
+    border:0;
+    background-color: #ffbc3f;
+    cursor: pointer;
+}
+
+header nav button:hover{
+    background-color: #ffce74;
+}
+
+header nav button:active{
+    background-color: #c2a163;
+}
+
+div#content{
+    margin: 2vw 40vh;
+    background: linear-gradient(#944415,#da631f);
+
+}
