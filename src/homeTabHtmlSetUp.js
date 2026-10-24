@@ -26,7 +26,7 @@ export default function homeTabHtmlSetUp() {
     refs.heading2Link.setAttribute("href","#")
     const heading2Txt = document.createTextNode(" - ");
     refs.heading2.insertBefore(heading2Txt, refs.heading2Quote.nextSibling);
-    refs.desc.append("This is the my restaurant. It's real.");
+    refs.desc.append("This is my restaurant. It's real.");
     refs.desc.classList += "desc"
     refs.img.src = odinImage;
     return "home" //to indicate that the was loaded and assign it to a variable in index.js later.
